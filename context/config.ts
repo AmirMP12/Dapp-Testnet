@@ -3,7 +3,7 @@ import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
 const actor = "amirmp";
 const private_key = process.env.PRIVATE_KEY;
 const signature = new JsSignatureProvider([private_key!]);
-const node_url = process.env.NODE_URL;
+const node_url = "process.env.NODE_URL";
 const json_rpc = new JsonRpc(node_url);
 
 
