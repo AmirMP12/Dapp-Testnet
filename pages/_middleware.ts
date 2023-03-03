@@ -2,10 +2,12 @@ import  { NextFetchEvent, NextRequest, NextResponse } from 'next/server'
 
 type Environment = "production" | "development" | "other";
 export function middleware(req: NextRequest, ev: NextFetchEvent) {
-  if (process.env.NODE_ENV === 'production') {
-    if (req.headers.get("x-forwarded-proto") !== "https" || !req.headers.get('host')?.includes('desired-domain.com')) {
+    const currentEnv = process.env.NODE_ENV as Environment;
+
+    if (currentEnv === 'production' && 
+        req.headers.get("x-forwarded-proto") !== "https") {
         return NextResponse.redirect(
-           `https://www.desired-domain.com${req.nextUrl.pathname}`,
+           `https://${req.headers.get('host')}${req.nextUrl.pathname}`,
            301
         );
     } 
