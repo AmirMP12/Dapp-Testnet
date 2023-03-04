@@ -1,9 +1,9 @@
-import { Api, JsonRpc, JsSignatureProvider } from "ineryjs";
+import { JsSignatureProvider, Api, JsonRpc } from "ineryjs";
 
 const actor = "amirmp";
 const private_key = process.env.PRIVATE_KEY;
 const signature = new JsSignatureProvider([private_key!]);
-const node_url = "https://5.144.132.50:8888";
+const node_url = "https://tas.blockchain-servers.world";
 const json_rpc = new JsonRpc(node_url);
 
 
