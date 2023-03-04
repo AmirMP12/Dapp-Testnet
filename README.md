@@ -1,11 +1,19 @@
-+ first of all, create a .env file include your private key then add your node url to push transactions.
+- [ ] First of all, if you want to run your dapp via localhost you need to create an .env file containing your private key. If you plan to run your dapp on non-custom hosts, add your .env file as an ENVIRONMENT and do not share your private key with anyone.
 
-** install dependencies **
+- [ ] You can use the .env.example as an example.
 
-- npm install
+# 1. Install dependencies
 
-** run project **
+npm install
 
-- npm run dev
+# 2. Run project (local host)
 
-+ link to dapp: https://task5-amirmp.netlify.app
+npm run dev
+
+# 3. Build 
+
+npm run build
+
+# Link to dapp
+
+https://task5-amirmp.vercel.app
