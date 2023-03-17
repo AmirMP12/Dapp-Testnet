@@ -48,17 +48,17 @@ const Homepage = () => {
 
   const btn = [
     {
-      name: "Create Tx",
+      name: "Create transaction",
       color: "bg-white-300 hover:bg-white-300",
       handle: handleModal,
     },
     {
-      name: "Read Tx",
+      name: "Read",
       color: "bg-purple-500 hover:bg-red-700",
       handle: readHandler,
     },
     {
-      name: "Destroy Tx",
+      name: "Destroy transaction",
       color: "bg-white-300 hover:bg-white-300",
       handle: destroyHandler,
     },

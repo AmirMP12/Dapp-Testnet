@@ -22,7 +22,7 @@ interface ICreateContext {
   actor: string;
   account: string;
   Create: (props: IPropsCreate) => void;
-  Destroy: (props: (id: any) => void;
+  Destroy: (props: IPropsCreate) => void;
   setStatus: (status: any) => void;
   status: string;
 }
