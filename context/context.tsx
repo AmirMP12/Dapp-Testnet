@@ -81,8 +81,7 @@ export const CreateProvider = ({ children }: Props) => {
         },
         { broadcast: true, sign: true }
       );
-      console.log(ctx, "\n");
-      console.log("\nResponse data:", ctx.processed.action_traces[0].console);
+      console.log(ctx);
       setOutput(ctx);
     } catch (error) {
       console.log(error);
@@ -115,9 +114,7 @@ export const CreateProvider = ({ children }: Props) => {
         },
         { broadcast: true, sign: true }
       );
-      console.log("Record destroyed by amirmp\n\n");
-      console.log(dtx, "\n");
-      console.log("responses: \n", dtx.processed.action_traces[0].console);
+      console.log(dtx);
       setOutput(dtx);
     } catch (error) {
       console.log(error);
@@ -149,7 +146,7 @@ export const CreateProvider = ({ children }: Props) => {
         },
         { broadcast: true, sign: true }
       );
-      console.log(rtx, "\n");
+      console.log(rtx);
       setOutput(rtx);
     } catch (error) {
       console.log(error);
